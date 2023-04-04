@@ -24,3 +24,10 @@ Aggiungere la foto o l’avatar dello studente e stampare tutti gli studenti con
 2) Con il metodo .filter cerco gli under 18
 3) Con lo stesso metodo filtro l'array per cercare gli over 65
 4) Stampo il risultato in pagina.
+
+**jSnack 2**
+
+1) Creo array studenti con nomi,cognomi, numero di matricola e    voti
+2)Seleziono il container
+3)Creo un nuovo array con map 
+4)Utilizzo il ciclo foreach per aggiungere tutto nella mia card.
