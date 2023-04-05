@@ -1,58 +1,71 @@
-//Array studenti
-const students =  [
+//Array students
+const students = [
   {
-    id: 213 , 
+    id: 213 ,
     name: 'Marco della Rovere',
-    grades: 78
+    votes: 78
   },
   {
-    id: 110 , 
+    id: 110 ,
     name: 'Paola Cortellessa',
-    grades: 96
+    votes: 96
   },
   {
-    id: 250 , 
+    id: 250 ,
     name: 'Andrea Mantegna',
-    grades: 48
+    votes: 48
   },
   {
-    id: 145 , 
+    id: 145 ,
     name: 'Gaia Borromini',
-    grades: 74
+    votes: 74
   },
   {
-    id: 196 , 
+    id: 196 ,
     name: 'Luigi Grimaldello',
-    grades: 68
+    votes: 68
   },
   {
-    id: 102 , 
+    id: 102 ,
     name: 'Piero della Francesca',
-    grades: 50
+    votes: 50
   },
   {
-    id: 120 , 
+    id: 120 ,
     name: 'Francesca da Polenta',
-    grades: 84
+    votes: 84
   },
-]
-console.log(students)
+];
 
+//Creo ciclo per incrementare nell'array le maiuscole
+const namesUpperCase = [];
 
-//Creo un ciclo for per incremente gli studenti nell'array namesUpperCase, trasformandoli in uppercase
-const namesUpperCase = []
-
-for (let i = 0; 1 > students.length; i++) {
+for (let i = 0; i < students.length; i++) {
   const student = students[i];
   const nameUpperCase = student.name.toUpperCase();
   namesUpperCase.push(nameUpperCase);
 }
 
 //Upper 70
-const studentsUpper70 = students.filter(student => student.total > 70);
+const studentsUpper70 = students.filter(student => student.votes > 70);
 
 //Upper 70 & Upper 120
-const studentsUpper70id120 = students.filter(student => student.total > 70 && student.id > 120);
+const studentsUpper70id120 = students.filter(student => student.votes > 70 && student.id > 120);
+
+//Stampo in pagina
+const nameList = document.getElementById('names-list');
+const nameList70 = document.getElementById('names-list70');
+const nameList120 = document.getElementById('names-list120');
+
+nameList.innerHTML = '<ul>' + namesUpperCase.map(name => `<li>${name}</li>`).join("") + "</ul>";
+
+nameList70.innerHTML = '<ul>' + studentsUpper70.map(student => `<li>${student.name}</li>`).join("") + "</ul>";
+
+nameList120.innerHTML = '<ul>' + studentsUpper70id120.map(student => `<li>${student.name}</li>`).join("") + "</ul>";
+
+
+
+
 
 
 
