@@ -57,6 +57,8 @@ const nameList = document.getElementById('names-list');
 const nameList70 = document.getElementById('names-list70');
 const nameList120 = document.getElementById('names-list120');
 
+//Concateno la stringa e uso map per ricreare l'array e join che mi serve per unire gli elementi nel nuovo array in una singola stringa, con una stringa vuota come separatore.
+
 nameList.innerHTML = '<ul>' + namesUpperCase.map(name => `<li>${name}</li>`).join("") + "</ul>";
 
 nameList70.innerHTML = '<ul>' + studentsUpper70.map(student => `<li>${student.name}</li>`).join("") + "</ul>";
